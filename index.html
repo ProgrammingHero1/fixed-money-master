@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Money Master</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+      #remaining-balance{
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="text-center">
+        <h1>Money Master!</h1>
+    </header>
+
+    <!-- Main section starts Here -->
+    <main class="container">
+        <section class="row row-cols-md-2 g-4">
+            <div>
+                <img class="img-fluid" src="assets/money.png" alt="" srcset="">
+            </div>
+            <div class="bg-light">
+                <div class="text-center">
+                    <h5 class="fw-bolder">Income</h5>
+                    <div class="row mb-3">
+                      <label for="income" class="fw-bold col-sm-2 col-form-label">Income</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="income">
+                      </div>
+                    </div>
+                    <h5 class="fw-bolder">Expenses</h5>
+                    <div class="row mb-3">
+                      <label for="food" class="fw-bold col-sm-2 col-form-label">Food</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="food">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="rent" class="fw-bold col-sm-2 col-form-label">Rent</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="rent">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="clothes" class="fw-bold col-sm-2 col-form-label">Clothes</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="clothes">
+                      </div>
+                    </div>
+                    <button id="calculate-btn" class="btn btn-lg btn-primary fw-bold" onclick="calculateExpense()">Calculate</button>
+                    <div class="my-2">
+                        <h5 class="my-3 fw-bold">Total Expense: <span id="total-expense"></span></h5>
+                        <h5 class="my-3 fw-bold" >Balance: <span id="balance"></span></h5>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="save" class="fw-bold col-sm-2 col-form-label">Save</label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control" id="save">
+                        </div>
+                        <div class="col-sm-5 d-flex justify-content-around">
+                            <h4 class=" fw-bolder me-3">%</h4>
+                          <button class="btn btn-primary w-75 fw-bold" onclick="calculateSavings()">Save</button>
+                        </div>
+                      </div>
+                      <div class="my-2">
+                        <h5 class="my-3 fw-bold ">Saving Amount: <span id="saving-amount"></span></h5>
+                        <h5 class="my-3 fw-bold ">Remaining Balance: <span id="remaining-balance"></span></h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Main section ends Here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
